@@ -1,0 +1,42 @@
+.left {
+    position: absolute;
+    left: 0;
+    width: 50vw;
+    height: 100vh;
+    background-color: lavender;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.left .titulo {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+
+.left .titulo p {
+    display: inline;
+}
+
+.left .titulo h1 {
+    display: inline;
+    color: #7f2e19;
+}
+
+.right {
+    position: absolute;
+    right: 0em;
+    bottom: 0em;
+    width: 50vw;
+    height: 100vh;
+    background-image: url("../img/banner6.png");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
+    background-color: #445d7b;
+    background-size: 100%;
+
+}
+
