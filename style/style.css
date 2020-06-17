@@ -4,11 +4,13 @@ body {
 
 header {
   background-color: black;
-  width: 100vw;
+  width: 100%;
   height: 55px;
   display: block;
-  position: static;
+  position: fixed;
   box-sizing: border-box;
+  border-bottom: rgb(190, 87, 46) 2px solid;
+  z-index: 10;
 }
 
 .container {
@@ -21,7 +23,7 @@ header {
   padding-left: 50px;
   box-sizing: border-box;
   align-items: center;
-  z-index: 10;
+  z-index: inherit;
 }
 
 .container .logo {
@@ -35,6 +37,7 @@ header {
   box-sizing: border-box;
   position: absolute;
   right: 0px;
+  
 }
 
 .container nav .menu {
@@ -58,33 +61,36 @@ header {
   position: absolute;
   z-index: -1;
   right: 0;
-  bottom: 0;
-  width: 57vw;
+  top: 0;
+  width: 57%;
   height: 100vh;
   background-image: url("../img/banner6.png");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
   background-color: #445d7b;
+  /* background-blend-mode: luminosity; */
   background-size: 90%;
   clip-path: polygon(19% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .left {
-  position: absolute;
+  position: relative;
   left: 0;
-  bottom: 0;
-  width: 43vw;
+  top: 0;
+  width: 44%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
+  padding-left: 90px;
 }
 
 .left .titulo {
   font-family: Arial, Helvetica, sans-serif;
   /* font-family: 'Roboto Mono', monospace; */
-  font-size: 1.5em;
+  font-size: 32px;
   /* font-weight: bold; */
   line-height: 1.5em;
   width: 14.5em;
@@ -93,3 +99,63 @@ header {
 .left .titulo strong {
   color: maroon;
 }
+
+.left .titulo .botao-container{
+  margin-top: 40px;
+  text-align: center;
+}
+
+.left .titulo .botao{
+  border: black 3px solid;
+  padding: 5px 23px 5px 23px;
+  width: min-content;
+  display: initial;
+  font-size: 23px;
+  background-color: rgb(214, 214, 248);
+  /* background-color: #f09b36; */
+}
+
+.left .titulo .botao:hover{
+  background-color: #f09b36;
+  /* background-color: rgb(214, 214, 248); */
+}
+
+.sobre {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: white;
+  /* box-sizing: border-box; */
+  display: block;
+}
+
+.sobre .container {
+  /* align-items: initial; */
+  padding-left: 100px;
+  padding-right: 100px;
+  /* padding-top: 10px; */
+  display: grid;
+  align-content: flex-start;
+}
+
+.sobre h1{
+  font-size: 40px;
+  text-align: center;
+  margin: 30px;
+}
+
+.sobre img {
+  width: 1000px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.sobre p{
+  font-size: 20px;
+  text-align: justify;
+  text-indent: 3em;
+  line-height: 2em;
+}
+
+
+
