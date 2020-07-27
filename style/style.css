@@ -210,6 +210,12 @@ header {
   position: relative;
 }
 
+.sobre-right p {
+  color: #d2d2d2;
+  position: absolute;
+  z-index: 2;
+}
+
 .sobre-right > div::before{
   content: '';
   width: 100%;
