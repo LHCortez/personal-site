@@ -1,5 +1,6 @@
 body {
   background-color: lavender;
+  font-size: 20px;
 }
 
 header {
@@ -90,7 +91,7 @@ header {
 .home-left .titulo {
   font-family: Arial, Helvetica, sans-serif;
   /* font-family: 'Roboto Mono', monospace; */
-  font-size: 32px;
+  font-size: 1.5em;
   /* font-weight: bold; */
   line-height: 1.5em;
   width: 14.5em;
@@ -124,24 +125,21 @@ header {
 
 .sobre {
   width: 100%;
-  height: fit-content;
+  height: 100vh;
   position: relative;
-  background: #FEFEFE;
-  /* box-sizing: border-box; */
-  display: block;
+  background: #fefefe;
+  overflow: hidden;
 }
 
 .sobre .container {
-  /* align-items: initial; */
-  padding-left: 100px;
-  padding-right: 100px;
-  /* padding-top: 10px; */
+  /* padding-left: 100px;
+  padding-right: 100px; */
   display: grid;
-  align-content: flex-start;
+  /* align-content: flex-start; */
 }
 
 .sobre h1{
-  font-size: 40px;
+  font-size: 2em;
   text-align: center;
   margin: 30px;
 }
@@ -153,18 +151,115 @@ header {
 .sobre h1::after{
   content: " ~";
 }
+
 .sobre img {
-  width: 1000px;
+  width: 100%;
   height: auto;
   margin-bottom: 20px;
+  transition: 500ms;
 }
 
-.sobre p{
-  font-size: 20px;
-  text-align: justify;
-  text-indent: 3em;
-  line-height: 2em;
+.sobre img:hover{
+  opacity: 0.9;
 }
 
+.sobre h2 {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
 
+.sobre p {
+  font-size: 0.9em;
+  text-align: center;
+  /* text-indent: 1.5em; */
+  line-height: 1.5em;
+  margin-bottom: 0.7em;
+}
 
+.sobre-conteudo {
+  display: flex;
+  /* align-items: center; */
+  height: max-content;
+}
+
+.sobre-left {
+  width: 45%;
+  padding: 0 1em;
+}
+
+.sobre-right {
+  width: 55%;
+  
+  /* align-items: left; */
+}
+
+.sobre-right div p {
+  color: #d2d2d2;
+  position: absolute;
+  z-index: 100;
+}
+
+.sobre-right > div {
+  height: 25px;
+  min-width: 55%;
+  margin: 0 0 10px;
+  line-height: 25px;
+  padding: 0 0 0 10px;
+  position: relative;
+}
+
+.sobre-right > div::before{
+  content: '';
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 25px;
+  z-index: 0;
+  background: #d2d2d2;;
+}
+
+.sobre-right > div::after {
+  content: '';
+  background-color: #333;
+  transition: 0.8s;
+  display: block;
+  animation: animate 2s forwards;
+  /* animation-fill-mode: forwards; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  z-index: 1;
+}
+
+.java::after {
+  max-width: 70%;
+}
+
+.sql::after {
+  max-width: 60%;
+}
+
+.javascript::after {
+  max-width: 40%;
+}
+
+.html::after {
+  max-width: 60%;
+}
+
+.css::after {
+  max-width: 40%;
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
