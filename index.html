@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<link rel="stylesheet" href="./style/reset.css">
-<link rel="stylesheet" href="./style/style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto+Mono:wght@300&display=swap"
-    rel="stylesheet">
 
 <head>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto+Mono:wght@300&display=swap"
+        rel="stylesheet">
+    <script src="https://use.fontawesome.com/ee03ba3f06.js"></script>
     <meta charset="UTF-8">
     <title>Luiz</title>
 </head>
@@ -37,9 +37,7 @@
                         <h1 class="subtitulo">.</h1>
                     </div>
                     <div class="botao-container">
-                        <div class="botao">
-                            Veja mais &#129047;
-                        </div>
+                        <div class="botao">&#129047;</div>
                     </div>
                 </div>
             </div>
@@ -65,21 +63,78 @@
                     <div class="sobre-right">
                         <h2>Evolução</h2>
                         <h3>Java</h3>
-                        <div class="java"><p>70%</p></div>
+                        <div class="java">
+                            <p>70%</p>
+                        </div>
                         <h3>SQL</h3>
-                        <div class="sql"><p>60%</p></div>
+                        <div class="sql">
+                            <p>60%</p>
+                        </div>
                         <h3>JavaScript</h3>
-                        <div class="javascript"><p>40%</p></div>
+                        <div class="javascript">
+                            <p>40%</p>
+                        </div>
                         <h3>HTML</h3>
-                        <div class="html"><p>60%</p></div>
+                        <div class="html">
+                            <p>60%</p>
+                        </div>
                         <h3>CSS</h3>
-                        <div class="css"><p>40%</p></div>
+                        <div class="css">
+                            <p>40%</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <section class="projetos">
+            <div class="container">
+                <h1>Projetos</h1>
+                <ul>
+                    <li>
+                        <h2>Jogo de xadrez</h2>
+                        <img src="./img/xadrez.png" alt="Imagem do projeto Jogo de Xadrez">
+                        <p>Jogo de xadrez no prompt. Feito na linguagem Java.</p>
+                    </li>
+                    <li>
+                        <h2>Casa do Código (Reprodução)</h2>
+                        <img src="./img/casadocodigo.png" alt="Imagem do projeto réplica da Casa do Código">
+                        <p>Réplica do site Casa do Código. Back end feito na linguagem Java, utilizando Spring MVC e
+                            controle de dependências com o Maven. Banco de dados MySQL com Hibernate.</p>
+                    </li>
+                    <li>
+                        <h2>Barbearia Alura</h2>
+                        <img src="./img/barbearia.PNG" alt="Imagem do projeto Barbearia Alura">
+                        <p>Modelo de Front-End desenvolvido para o estudo de CSS e HTML</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="contato">
+            <div class="container">
+                <h1>Contato</h1>
+                <form>
+                    <input type="text" id="nome" placeholder="Nome" required>
+                    <input type="email" id="email" placeholder="E-mail" required>
+                    <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Mensagem"
+                        required></textarea>
+                    <input class="enviar" type="submit" value="Enviar">
+                </form>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <div class="container">
+            <div class="icons">
+                <a href="https://github.com/LHCortez"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/luizhcortez/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                <a href="mailto:luizcquintas@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+            </div>
+            <p>Luiz Humberto &copy; 2020</p>
+        </div>
+    </footer>
 </body>
 
 

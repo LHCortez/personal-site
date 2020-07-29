@@ -34,18 +34,18 @@ header {
 
 .container nav {
   padding-right: inherit;
-  display: inline; 
+  display: inline;
   box-sizing: border-box;
   position: absolute;
   right: 0px;
-  
+
 }
 
 .container nav .menu {
   display: flex;
   position: relative;
   left: 0;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 .container nav .menu li {
@@ -53,7 +53,7 @@ header {
   font-size: 18px;
 }
 
-.container nav .menu a{
+.container nav .menu a {
   color: lavender;
   text-decoration: none;
 }
@@ -101,55 +101,78 @@ header {
   color: maroon;
 }
 
-.home-left .titulo .botao-container{
+.home-left .titulo .botao-container {
   margin-top: 40px;
   text-align: center;
 }
 
-.home-left .titulo .botao{
-  border: black 3px solid;
+.home-left .titulo .botao {
+  /* border: black 3px solid; */
   padding: 5px 23px 5px 23px;
   width: min-content;
   display: initial;
-  font-size: 23px;
-  background-color: rgb(214, 214, 248);
+  font-size: 30px;
+  /* background-color: rgb(214, 214, 248); */
   transition: 700ms;
   /* background-color: #f09b36; */
+  cursor: pointer;
+  box-sizing: border-box;
 }
 
-.home-left .titulo .botao:hover{
+.home-left .titulo .botao:hover,
+.home-left .titulo .botao:active {
   background-color: #f09b36;
   box-shadow: 0px 0px 5px grey;
+  /* border: black 2px solid; */
   /* background-color: rgb(214, 214, 248); */
 }
 
 .sobre {
   width: 100%;
-  height: 100vh;
+  height: 850px;
   position: relative;
   background: #fefefe;
   overflow: hidden;
 }
 
-.sobre .container {
-  /* padding-left: 100px;
-  padding-right: 100px; */
+.sobre .container,
+.projetos .container,
+.contato .container {
   display: grid;
-  /* align-content: flex-start; */
+  align-content: flex-start;
 }
 
-.sobre h1{
+.sobre h1,
+.projetos h1,
+.contato h1 {
   font-size: 2em;
   text-align: center;
   margin: 30px;
 }
 
-.sobre h1::before{
+.sobre h1::before,
+.projetos h1::before,
+.contato h1::before {
   content: "~ ";
 }
 
-.sobre h1::after{
+.sobre h1::after,
+.projetos h1::after,
+.contato h1::after {
   content: " ~";
+}
+
+.sobre h2,
+.projetos h2 {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+.sobre h3,
+.projetos h3 {
+  padding-bottom: 10px;
 }
 
 .sobre img {
@@ -159,15 +182,9 @@ header {
   transition: 500ms;
 }
 
-.sobre img:hover{
-  opacity: 0.9;
-}
-
-.sobre h2 {
-  font-size: 1.5em;
-  text-align: center;
-  margin-top: 0.5em;
-  margin-bottom: 1em;
+.sobre img:hover,
+.sobre img:active {
+  opacity: 0.8;
 }
 
 .sobre p {
@@ -191,32 +208,33 @@ header {
 
 .sobre-right {
   width: 55%;
-  
+
   /* align-items: left; */
 }
 
 .sobre-right div p {
   color: #d2d2d2;
   position: absolute;
-  z-index: 100;
+  z-index: 2;
 }
 
-.sobre-right > div {
+.sobre-right>div {
   height: 25px;
   min-width: 55%;
   margin: 0 0 10px;
   line-height: 25px;
   padding: 0 0 0 10px;
   position: relative;
+  transition: 500ms;
 }
 
-.sobre-right p {
-  color: #d2d2d2;
-  position: absolute;
-  z-index: 2;
+.sobre-right div:hover,
+.sobre-right div:active {
+  opacity: 0.8;
 }
 
-.sobre-right > div::before{
+
+.sobre-right>div::before {
   content: '';
   width: 100%;
   position: absolute;
@@ -224,10 +242,11 @@ header {
   top: 0;
   height: 25px;
   z-index: 0;
-  background: #d2d2d2;;
+  background: #d2d2d2;
+  ;
 }
 
-.sobre-right > div::after {
+.sobre-right>div::after {
   content: '';
   background-color: #333;
   transition: 0.8s;
@@ -265,7 +284,150 @@ header {
   0% {
     width: 0;
   }
+
   100% {
     width: 100%;
   }
+}
+
+.projetos {
+  width: 100%;
+  height: 850px;
+  background-color: gainsboro;
+  overflow: hidden;
+}
+
+.projetos ul {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.projetos li {
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 30px 0;
+  padding-right: 20px;
+  box-sizing: border-box;
+  height: 180px;
+  overflow: hidden;
+  transition: 700ms;
+}
+
+.projetos li:hover,
+.projetos li:active {
+  border-color: rgb(190, 87, 46);
+  box-shadow: 0px 0px 5px grey;
+  transform: scale(1.05, 1.05);
+  cursor: pointer;
+}
+
+.projetos img {
+  height: 100%;
+  width: auto;
+  float: left;
+  margin-right: 20px;
+}
+
+.projetos h2 {
+  text-align: left;
+  display: inline-block;
+  /* margin-left: 20px; */
+  font-size: 1.3em;
+}
+
+.projetos p {
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+
+.contato {
+  width: 100%;
+  height: 550px;
+  background-color: #445d7b;
+  overflow: hidden;
+}
+
+.contato form {
+  display: block;
+  width: 55%;
+  margin: 0 auto;
+  color: white;
+}
+
+.contato input {
+  height: 40px;
+  width: 100%;
+  margin: 3px 0;
+  background-color: #091a2f;
+  border: 0;
+  font-size: 1em;
+  padding: 5px 15px;
+  box-sizing: border-box;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contato textarea {
+  padding: 10px 15px;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  font-size: 1em;
+  margin: 3px 0;
+  border: 0;
+  background-color: #091a2f;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contato .enviar {
+  position: relative;
+  border: 2px solid lavender;
+  width: 30%;
+  float: right;
+}
+
+.contato .enviar {
+  cursor: pointer;
+  transition: 700ms;
+}
+
+.contato .enviar:hover,
+.contato .enviar:active {
+  background-color: rgb(190, 87, 46);
+}
+
+footer {
+  width: 100%;
+  height: 200px;
+  background-color: #16283f;
+}
+
+footer .container {
+  display: block;
+  padding-top: 60px;
+}
+
+footer .icons {
+  margin: 0 auto;
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+footer .icons a {
+  transition: 500ms;
+  color: rgb(190, 87, 46);
+  margin: 0 15px;
+}
+
+footer .icons a:hover,
+footer .icons a:active {
+ /* color: rgb(190, 87, 46); */
+ text-shadow: 0 0 10px rgba(255, 255, 255, .5)
+}
+
+footer p {
+  color: white;
+  text-align: center;
 }
