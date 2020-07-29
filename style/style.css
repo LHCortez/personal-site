@@ -3,6 +3,38 @@ body {
   font-size: 20px;
 }
 
+h2 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h2::before {
+  content: "~ ";
+}
+
+h2::after {
+  content: " ~";
+}
+
+h3 {
+  text-align: left;
+  display: inline-block;
+  padding: 15px 0;
+  font-size: 1.3em;
+}
+
+.container {
+  width: 1200px;
+  height: inherit;
+  margin: 0 auto;
+  padding: 50px 50px;
+  box-sizing: border-box;
+  align-items: center;
+  z-index: inherit;
+  overflow: hidden;
+}
+
 header {
   background-color: black;
   width: 100%;
@@ -14,51 +46,43 @@ header {
   z-index: 10;
 }
 
-.container {
-  width: 1200px;
-  height: inherit;
-  margin: 0 auto;
+header .container {
   position: relative;
   display: flex;
-  padding-right: 50px;
-  padding-left: 50px;
-  box-sizing: border-box;
-  align-items: center;
-  z-index: inherit;
+  padding: 0 50px;
 }
 
-.container .logo {
+header .logo {
   height: 40px;
   width: auto;
 }
 
-.container nav {
+header nav {
   padding-right: inherit;
   display: inline;
   box-sizing: border-box;
   position: absolute;
   right: 0px;
-
 }
 
-.container nav .menu {
+header nav .menu {
   display: flex;
   position: relative;
   left: 0;
   box-sizing: border-box;
 }
 
-.container nav .menu li {
+header nav .menu li {
   margin-left: 40px;
   font-size: 18px;
 }
 
-.container nav .menu a {
+header nav .menu a {
   color: lavender;
   text-decoration: none;
 }
 
-.home-right {
+.capa .home-right {
   position: absolute;
   z-index: -1;
   right: 0;
@@ -75,7 +99,7 @@ header {
   clip-path: polygon(19% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-.home-left {
+.capa .home-left {
   position: relative;
   left: 0;
   top: 0;
@@ -88,7 +112,7 @@ header {
   padding-left: 90px;
 }
 
-.home-left .titulo {
+.capa .home-left .titulo {
   font-family: Arial, Helvetica, sans-serif;
   /* font-family: 'Roboto Mono', monospace; */
   font-size: 1.5em;
@@ -97,21 +121,22 @@ header {
   width: 14.5em;
 }
 
-.home-left .titulo strong {
+.capa .home-left .titulo strong {
   color: maroon;
 }
 
-.home-left .titulo .botao-container {
+.capa .home-left .titulo .botao-container {
   margin-top: 40px;
   text-align: center;
 }
 
-.home-left .titulo .botao {
+.capa .home-left .titulo .botao {
+  color: #445d7b;
   /* border: black 3px solid; */
   padding: 5px 23px 5px 23px;
   width: min-content;
   display: initial;
-  font-size: 30px;
+  font-size: 45px;
   /* background-color: rgb(214, 214, 248); */
   transition: 700ms;
   /* background-color: #f09b36; */
@@ -119,60 +144,19 @@ header {
   box-sizing: border-box;
 }
 
-.home-left .titulo .botao:hover,
-.home-left .titulo .botao:active {
-  background-color: #f09b36;
-  box-shadow: 0px 0px 5px grey;
+.capa .home-left .titulo .botao:hover,
+.capa .home-left .titulo .botao:active {
+  color: rgb(190, 87, 46);
   /* border: black 2px solid; */
   /* background-color: rgb(214, 214, 248); */
 }
 
 .sobre {
   width: 100%;
-  height: 850px;
+  height: fit-content;
   position: relative;
   background: #fefefe;
   overflow: hidden;
-}
-
-.sobre .container,
-.projetos .container,
-.contato .container {
-  display: grid;
-  align-content: flex-start;
-}
-
-.sobre h1,
-.projetos h1,
-.contato h1 {
-  font-size: 2em;
-  text-align: center;
-  margin: 30px;
-}
-
-.sobre h1::before,
-.projetos h1::before,
-.contato h1::before {
-  content: "~ ";
-}
-
-.sobre h1::after,
-.projetos h1::after,
-.contato h1::after {
-  content: " ~";
-}
-
-.sobre h2,
-.projetos h2 {
-  font-size: 1.5em;
-  text-align: center;
-  margin-top: 0.5em;
-  margin-bottom: 1em;
-}
-
-.sobre h3,
-.projetos h3 {
-  padding-bottom: 10px;
 }
 
 .sobre img {
@@ -189,52 +173,54 @@ header {
 
 .sobre p {
   font-size: 0.9em;
-  text-align: center;
-  /* text-indent: 1.5em; */
+  text-align: justify;
+  text-indent: 3em;
   line-height: 1.5em;
   margin-bottom: 0.7em;
 }
 
 .sobre-conteudo {
-  display: flex;
-  /* align-items: center; */
+  width: 100%;
   height: max-content;
 }
 
-.sobre-left {
-  width: 45%;
-  padding: 0 1em;
+.conhecimentos {
+  background-color: lightskyblue;
+  height: fit-content;
+  overflow: hidden;
 }
 
-.sobre-right {
-  width: 55%;
-
-  /* align-items: left; */
+.conhecimentos h3 {
+  padding: 0 0 5px 0;
 }
 
-.sobre-right div p {
+.conhecimentos .skillbar{
+  margin: 0 auto;
+  width: 56%;
+}
+
+.conhecimentos div p {
   color: #d2d2d2;
   position: absolute;
   z-index: 2;
 }
 
-.sobre-right>div {
+.conhecimentos .skillbar div {
   height: 25px;
   min-width: 55%;
-  margin: 0 0 10px;
+  margin: 0 0 20px;
   line-height: 25px;
   padding: 0 0 0 10px;
   position: relative;
   transition: 500ms;
 }
 
-.sobre-right div:hover,
-.sobre-right div:active {
+.conhecimentos .skillbar div:hover,
+.conhecimentos .skillbar div:active {
   opacity: 0.8;
 }
 
-
-.sobre-right>div::before {
+.conhecimentos .skillbar div::before {
   content: '';
   width: 100%;
   position: absolute;
@@ -246,7 +232,7 @@ header {
   ;
 }
 
-.sobre-right>div::after {
+.conhecimentos .skillbar div::after {
   content: '';
   background-color: #333;
   transition: 0.8s;
@@ -260,19 +246,19 @@ header {
   z-index: 1;
 }
 
-.java::after {
+.conhecimentos .java::after {
   max-width: 70%;
 }
 
-.sql::after {
+.conhecimentos .sql::after {
   max-width: 60%;
 }
 
-.javascript::after {
+.conhecimentos .javascript::after {
   max-width: 40%;
 }
 
-.html::after {
+.conhecimentos .html::after {
   max-width: 60%;
 }
 
@@ -293,7 +279,7 @@ header {
 .projetos {
   width: 100%;
   height: 850px;
-  background-color: gainsboro;
+  background-color: lavander;
   overflow: hidden;
 }
 
@@ -305,7 +291,7 @@ header {
 .projetos li {
   border: 2px solid black;
   border-radius: 10px;
-  margin: 30px 0;
+  margin-bottom: 40px;
   padding-right: 20px;
   box-sizing: border-box;
   height: 180px;
@@ -328,13 +314,6 @@ header {
   margin-right: 20px;
 }
 
-.projetos h2 {
-  text-align: left;
-  display: inline-block;
-  /* margin-left: 20px; */
-  font-size: 1.3em;
-}
-
 .projetos p {
   font-size: 0.9em;
   line-height: 1.5em;
@@ -342,16 +321,16 @@ header {
 
 .contato {
   width: 100%;
-  height: 550px;
+  height: fit-content;
   background-color: #445d7b;
   overflow: hidden;
 }
 
 .contato form {
-  display: block;
   width: 55%;
   margin: 0 auto;
   color: white;
+  /* overflow: hidden; */
 }
 
 .contato input {
@@ -399,13 +378,9 @@ header {
 
 footer {
   width: 100%;
-  height: 200px;
+  height: fit-content;
   background-color: #16283f;
-}
-
-footer .container {
-  display: block;
-  padding-top: 60px;
+  overflow: hidden;
 }
 
 footer .icons {
