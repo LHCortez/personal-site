@@ -1,3 +1,7 @@
+/* .wow {
+  visibility: hidden;
+} */
+
 body {
   background-color: lavender;
   font-size: 20px;
@@ -119,6 +123,7 @@ header nav .menu a {
   /* font-weight: bold; */
   line-height: 1.5em;
   width: 14.5em;
+  height: 200px;
 }
 
 .capa .home-left .titulo strong {
@@ -138,15 +143,17 @@ header nav .menu a {
   display: initial;
   font-size: 45px;
   /* background-color: rgb(214, 214, 248); */
-  transition: 700ms;
+  transition: 500ms;
   /* background-color: #f09b36; */
   cursor: pointer;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .capa .home-left .titulo .botao:hover,
 .capa .home-left .titulo .botao:active {
   color: rgb(190, 87, 46);
+  font-size: 60px;
   /* border: black 2px solid; */
   /* background-color: rgb(214, 214, 248); */
 }
@@ -185,95 +192,86 @@ header nav .menu a {
 }
 
 .conhecimentos {
-  background-color: lightskyblue;
+  background-color: #6689b4;
   height: fit-content;
   overflow: hidden;
 }
+
+.conhecimentos .skillbar {
+  height: fit-content;
+  max-width: 100%;
+  width: 70%;
+  margin: 10% auto;
+  display: block;
+}
+
+
 
 .conhecimentos h3 {
   padding: 0 0 5px 0;
 }
 
-.conhecimentos .skillbar{
-  margin: 0 auto;
-  width: 56%;
+.conhecimentos .percent {
+  color: #2e2e2e;
+  padding: 0 10px;
+  font-size: 17px;
+  /* line-height: 25.5px; */
+  vertical-align: middle;
+  font-weight: 700;
+  line-height: 27px;
+  
 }
 
-.conhecimentos div p {
-  color: #d2d2d2;
-  position: absolute;
-  z-index: 2;
+.conhecimentos .skillbar > div {
+  transition: 200ms;
 }
 
-.conhecimentos .skillbar div {
-  height: 25px;
-  min-width: 55%;
-  margin: 0 0 20px;
-  line-height: 25px;
-  padding: 0 0 0 10px;
-  position: relative;
-  transition: 500ms;
-}
-
-.conhecimentos .skillbar div:hover,
-.conhecimentos .skillbar div:active {
+.conhecimentos .skillbar > div:hover,
+.conhecimentos .skillbar > div:active {
   opacity: 0.8;
 }
 
-.conhecimentos .skillbar div::before {
-  content: '';
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 25px;
-  z-index: 0;
-  background: #d2d2d2;
-  ;
+.conhecimentos .skillbar .progress-bar {
+  margin-bottom: 40px;
+  overflow: hidden;
+  /*padding-left:20px;
+  padding-right: 25px; /* Separate bars from container */
 }
 
-.conhecimentos .skillbar div::after {
-  content: '';
-  background-color: #333;
-  transition: 0.8s;
-  display: block;
-  animation: animate 2s forwards;
-  /* animation-fill-mode: forwards; */
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  z-index: 1;
+/* .conhecimentos .skillbar .progress-title-holder {
+  padding-bottom: 7px;
+  position: relative;
+  margin: 5px 0;
+  font-family: Montserrat, sans-serif;
+  font-size: 2e;
+  line-height: 15px;
+  font-weight: 400;
+  color: #2e2e2e;
+} */
+
+.conhecimentos .skillbar .progress-title {
+  z-index: 100;
+  font-weight: bold;
 }
 
-.conhecimentos .java::after {
-  max-width: 70%;
+.conhecimentos .skillbar .progress-content-outter {
+  height: 27px;
+  background-color: #E1E1E0;
+  text-align: end;
 }
 
-.conhecimentos .sql::after {
-  max-width: 60%;
+.conhecimentos .skillbar .progress-content {
+  height: 40px;
+  background-color: rgb(190, 87, 46);
+  width: 0%;
+  /* Initial value */
 }
 
-.conhecimentos .javascript::after {
-  max-width: 40%;
-}
-
-.conhecimentos .html::after {
-  max-width: 60%;
-}
-
-.css::after {
-  max-width: 40%;
-}
-
-@keyframes animate {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 100%;
-  }
+.conhecimentos .skillbar .progress-number-wrapper {
+  color: black;
+  position: relative;
+  /* top: 0; */
+  z-index: 10000;
 }
 
 .projetos {
@@ -398,8 +396,8 @@ footer .icons a {
 
 footer .icons a:hover,
 footer .icons a:active {
- /* color: rgb(190, 87, 46); */
- text-shadow: 0 0 10px rgba(255, 255, 255, .5)
+  /* color: rgb(190, 87, 46); */
+  text-shadow: 0 0 10px rgba(255, 255, 255, .5)
 }
 
 footer p {
