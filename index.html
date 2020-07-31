@@ -5,16 +5,17 @@
 <head>
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/animate.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto+Mono:wght@300&display=swap"
         rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://use.fontawesome.com/ee03ba3f06.js"></script>
     <script src="./js/fill.bar.js"></script>
+    <script src="./js/wow.js"></script>
 
-<!-- 
     <script>
         new WOW().init();
-    </script> -->
+    </script>
 
     <meta charset="UTF-8">
     <title>Luiz</title>
@@ -23,20 +24,20 @@
 <body>
     <header>
         <div class="container">
-            <a href="#"><img class="logo" src="./img/logo.png"></a>
+            <a href="#capa"><img class="logo" src="./img/logo.png"></a>
             <nav>
                 <ul class="menu">
-                    <li><a href="#">sobre</a></li>
-                    <li><a href="#">conhecimentos</a></li>
-                    <li><a href="#">projetos</a></li>
-                    <li><a href="#">contato</a></li>
+                    <li><a href="#sobre">sobre</a></li>
+                    <li><a href="#conhecimentos">conhecimentos</a></li>
+                    <li><a href="#projetos">projetos</a></li>
+                    <li><a href="#contato">contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="capa">
+        <section id="capa">
             <div class="home-left">
                 <div class="titulo">
                     <link rel="stylesheet" href="./style/typewriter.css">
@@ -46,7 +47,7 @@
                         <h1 class="subtitulo">.</h1>
                     </div>
                     <div class="botao-container">
-                        <div class="botao"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></div>
+                        <div class="botao"><a href="#sobre"><i class="fa fa-arrow-circle-down wow bounceIn" aria-hidden="true"></i></a></div>
                     </div>
                 </div>
             </div>
@@ -54,11 +55,11 @@
             </div>
         </section>
 
-        <section class="sobre">
+        <section id="sobre">
             <div class="container">
-                <h2>Sobre</h2>
-                <img src="./img/eu3.PNG" alt="Foto pessoal">
-                <div class="sobre-conteudo">
+                <h2 class="wow fadeInLeft">Sobre</h2>
+                <img class="wow fadeInDown" src="./img/eu3.PNG" alt="Foto pessoal">
+                <div class="sobre-conteudo wow zoomIn">
                     <p>Sou um aspirante a desenvolvedor web full stack, porém no momento focando no back end com
                         Java EE, Spring Boot e MySQL.</p>
                     <p>Atualmente cursando Análise e Desenvolvimento de Sistemas na Universidade Estácio de Sá, e
@@ -86,18 +87,15 @@
                         pellentesque, ante neque efficitur augue, at tincidunt elit nunc a risus. Suspendisse potenti.
                         Etiam tincidunt placerat tempor. Donec purus massa, lobortis eget lectus at, blandit vehicula
                         ipsum.</p>
-                    <section class="section--green wow slideInLeft" data-wow-duration="4s"
-                        style="visibility: visible; animation-duration: 4s; animation-name: slideInLeft;"> sdf asdf asdf
-                    </section>
                 </div>
             </div>
         </section>
 
-        <section class="conhecimentos">
+        <section id="conhecimentos">
             <div class="container">
-                <h2>Conhecimentos</h2>
+                <h2 class="wow fadeInRight">Conhecimentos</h2>
                 <div class="skillbar">
-                    
+
                     <div class="progress-bar" data-percentage="80%">
                         <h3>Java</h3>
                         <div class="progress-content-outter">
@@ -161,22 +159,22 @@
                 </div>
         </section>
 
-        <section class="projetos">
+        <section id="projetos">
             <div class="container">
-                <h2>Projetos</h2>
+                <h2 class="wow fadeInLeft">Projetos</h2>
                 <ul>
-                    <li>
+                    <li class="wow fadeInRight">
                         <h3>Jogo de xadrez</h3>
                         <img src="./img/xadrez.png" alt="Imagem do projeto Jogo de Xadrez">
                         <p>Jogo de xadrez no prompt. Feito na linguagem Java.</p>
                     </li>
-                    <li>
+                    <li class="wow fadeInLeft">
                         <h3>Casa do Código (Reprodução)</h3>
                         <img src="./img/casadocodigo.png" alt="Imagem do projeto réplica da Casa do Código">
                         <p>Réplica do site Casa do Código. Back end feito na linguagem Java, utilizando Spring MVC e
                             controle de dependências com o Maven. Banco de dados MySQL com Hibernate.</p>
                     </li>
-                    <li>
+                    <li class="wow fadeInRight">
                         <h3>Barbearia Alura</h3>
                         <img src="./img/barbearia.PNG" alt="Imagem do projeto Barbearia Alura">
                         <p>Modelo de Front-End desenvolvido para o estudo de CSS e HTML</p>
@@ -185,10 +183,10 @@
             </div>
         </section>
 
-        <section class="contato">
+        <section id="contato">
             <div class="container">
-                <h2>Contato</h2>
-                <form>
+                <h2 class="wow fadeInRight">Contato</h2>
+                <form class="wow fadeInUp">
                     <input type="text" id="nome" placeholder="Nome" required>
                     <input type="email" id="email" placeholder="E-mail" required>
                     <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Mensagem"
@@ -210,7 +208,6 @@
             <p>Luiz Humberto &copy; 2020</p>
         </div>
     </footer>
+
 </body>
-
-
 </html>
