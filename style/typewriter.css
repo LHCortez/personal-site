@@ -63,7 +63,7 @@
     }
 
     100% {
-        border: none;
+        border-right: .1em solid lavender;      
     }
 }
 
@@ -102,7 +102,7 @@
 
     100% {
         opacity: 1;
-        border: none;
+        border-right: .1em solid lavender;
     }
 }
 

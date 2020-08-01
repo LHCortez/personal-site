@@ -10,13 +10,13 @@
         rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://use.fontawesome.com/ee03ba3f06.js"></script>
+    <script src="./js/menu.mobile.js"></script>
     <script src="./js/fill.bar.js"></script>
     <script src="./js/wow.js"></script>
-
     <script>
         new WOW().init();
     </script>
-
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta charset="UTF-8">
     <title>Luiz</title>
 </head>
@@ -24,15 +24,31 @@
 <body>
     <header>
         <div class="container">
-            <a href="#capa"><img class="logo" src="./img/logo.png"></a>
+            <a href="#"><img class="logo" src="./img/logo.png"></a>
             <nav>
+                <!-- Desktop -->
                 <ul class="menu">
                     <li><a href="#sobre">sobre</a></li>
                     <li><a href="#conhecimentos">conhecimentos</a></li>
                     <li><a href="#projetos">projetos</a></li>
                     <li><a href="#contato">contato</a></li>
                 </ul>
+                <!-- Mobile -->
+                <div id=menuMobile>
+                    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                    <i class="fa fa-bars"></i>
+                    </a>
+                </div>
             </nav>
+        </div>
+        <div id="menuMobile">
+            <ul id="linksMobile" onclick="hideMenu()">
+                <li><a href="#">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#conhecimentos">Conhecimentos</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
         </div>
     </header>
 
@@ -47,7 +63,8 @@
                         <h1 class="subtitulo">.</h1>
                     </div>
                     <div class="botao-container">
-                        <div class="botao"><a href="#sobre"><i class="fa fa-arrow-circle-down wow bounceIn" aria-hidden="true"></i></a></div>
+                        <div class="botao"><a href="#sobre"><i class="fa fa-arrow-circle-down wow bounceIn"
+                                    aria-hidden="true"></i></a></div>
                     </div>
                 </div>
             </div>
@@ -210,4 +227,5 @@
     </footer>
 
 </body>
+
 </html>
