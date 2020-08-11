@@ -1,29 +1,26 @@
 .wow {
   visibility: hidden;
+  animation-duration: 1s;
 }
 
 .fadeInLeft {
-  animation-duration: 1s;
   animation-name: fadeInLeft;
 }
 
 .fadeInRight {
-  animation-duration: 1s;
+
   animation-name: fadeInRight;
 }
 
 .fadeInDown {
-  animation-duration: 1s;
   animation-name: fadeInDown;
 }
 
 .fadeInUp {
-  animation-duration: 1s;
   animation-name: fadeInUp;
 }
 
 .zoomIn {
-  animation-duration: 1s;
   animation-name: zoomIn;
 }
 
@@ -44,26 +41,38 @@ body {
   font-size: 20px;
 }
 
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+}
+
 h2 {
   font-size: 2em;
   text-align: center;
   margin-bottom: 50px;
-  margin-top: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  h2 {
+    margin-bottom: 30px;
+    font-size: 1.8em;
+  }
 }
 
 h2::before {
-  content: "~ ";
+  content: "- ";
 }
 
 h2::after {
-  content: " ~";
+  content: " -";
 }
 
 h3 {
   text-align: left;
   display: inline-block;
   padding: 15px 0;
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 
 .container {
@@ -77,10 +86,16 @@ h3 {
   overflow: hidden;
 }
 
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 52px 10px;
+  }
+}
+
 header {
   background-color: black;
   width: 100%;
-  height: 55px;
+  height: 50px;
   display: block;
   position: fixed;
   box-sizing: border-box;
@@ -94,9 +109,21 @@ header .container {
   padding: 0 50px;
 }
 
+@media only screen and (max-width: 600px) {
+  header .container {
+    padding: 0 25px;
+  }
+}
+
 header .logo {
   height: 40px;
   width: auto;
+}
+
+@media only screen and (max-width: 175px) {
+  header .logo {
+    display: none;
+  }
 }
 
 header nav {
@@ -114,9 +141,9 @@ header nav .menu {
   box-sizing: border-box;
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 600px) {
   header nav .menu {
-      display: none;
+    display: none;
   }
 }
 
@@ -138,12 +165,13 @@ header a:active {
 }
 
 header #menuMobile {
-  display: none;;
+  display: none;
+  ;
 }
 
-@media only screen and (max-width: 599px){
+@media only screen and (max-width: 599px) {
   header nav #menuMobile {
-      display: unset;
+    display: unset;
   }
 }
 
@@ -155,8 +183,8 @@ header #menuMobile #linksMobile {
 header #menuMobile #linksMobile li a {
   text-align: right;
   display: inline-block;
-  width: calc(100% - 50px);
-  padding: 20px 50px 20px 0;
+  width: calc(100% - 25px);
+  padding: 20px 25px 20px 0;
 }
 
 /* Style the hamburger menu */
@@ -172,9 +200,9 @@ header #menuMobile a:active {
   color: black;
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 600px) {
   header #menuMobile {
-      display: unset;
+    display: unset;
   }
 }
 
@@ -193,6 +221,31 @@ header #menuMobile a:active {
   /* background-blend-mode: luminosity; */
   background-size: 90%;
   clip-path: polygon(19% 0%, 100% 0%, 100% 100%, 0% 100%);
+  padding-top: 50px;
+}
+
+@media only screen and (max-height: 240px) {
+  #capa .home-right {
+    background-size: 65%;
+  }
+}
+
+@media only screen and (min-height: 241px) and (max-height: 275px) {
+  #capa .home-right {
+    background-size: 80%;
+  }
+}
+
+@media only screen and (max-width: 600px) and (max-aspect-ratio: 3/4) {
+  #capa .home-right {
+    right: unset;
+    left: 0;
+    width: 100vw;
+    height: 50%;
+    clip-path: unset;
+    background-position-y: bottom;
+    background-size: 100%;
+  }
 }
 
 #capa .home-left {
@@ -204,28 +257,181 @@ header #menuMobile a:active {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
-  padding-left: 90px;
+  padding-left: 2%;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 600px) and (max-aspect-ratio: 3/4) {
+  #capa .home-left {
+    right: unset;
+    left: unset;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    padding-left: unset;
+    align-items: flex-end;
+  }
 }
 
 #capa .home-left .titulo {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.5em;
+  font-size: 30px;
   line-height: 1.5em;
   width: 14.5em;
-  height: 200px;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 219px) {
+  #capa .home-left .titulo {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 220px) and (max-width: 330px) {
+  #capa .home-left .titulo {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (min-width: 231px) and (max-width: 530px) {
+  #capa .home-left .titulo {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 531px) and (max-width: 577px) {
+  #capa .home-left .titulo {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 578px) and (max-width: 649px) {
+  #capa .home-left .titulo {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 768px) {
+  #capa .home-left .titulo {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  #capa .home-left .titulo {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 175px) {
+  #capa .home-left .titulo .css-typing {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) and (max-aspect-ratio: 3/4)  {
+  #capa .home-left .titulo {
+    height: 45vh;
+    padding-top: 20%;
+    box-sizing: border-box;
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 480px) and (max-height: 639px) and (min-aspect-ratio: 2999/4000)  {
+  #capa .home-left .titulo {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 450px) and (max-aspect-ratio: 3/4)  {
+  #capa .home-left .titulo {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 340px) and (max-aspect-ratio: 3/4)  {
+  #capa .home-left .titulo {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 275px) and (max-aspect-ratio: 3/4)  {
+  #capa .home-left .titulo {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 240px) and (max-aspect-ratio: 3/4)  {
+  #capa .home-left .titulo {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 200px) and (max-aspect-ratio: 3/4)  {
+  #capa .home-left .titulo .css-typing {
+    display: none;
+  }
+
+  .bounceIn{
+    animation-delay: 0s;
+  }
+}
+
+#capa .home-left .titulo .botao-container {
+  margin-top: 1.8em;
+  text-align: center;
+  overflow: hidden;
+  height: 60px;
+}
+
+@media only screen and (max-width: 380px) and (max-height: 506px) and (min-aspect-ratio: 2999/4000)  {
+  #capa .home-left .titulo .css-typing {
+    display: none;
+  }
+
+  #capa .home-left .titulo .botao-container {
+    margin-top: 0;
+  }
+
+  .bounceIn{
+    animation-delay: 0s;
+  }
+}
+
+@media only screen and (max-height: 175px) {
+  #capa .home-left .titulo .css-typing {
+    display: none;
+  }
+
+  #capa .home-left .titulo .botao-container {
+    margin-top: 0;
+  }
+
+  .bounceIn{
+    animation-delay: 0s;
+  }
+} 
+
+
+@media only screen and (max-height: 375px) {
+  #capa .home-left .titulo .botao-container {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 450px) and (max-aspect-ratio: 3/4)  {
+  #capa .home-left .titulo .botao-container {
+    margin-top: 0;
+  }
 }
 
 #capa .home-left .titulo strong {
   color: maroon;
 }
 
-#capa .home-left .titulo .botao-container {
-  margin-top: 40px;
-  text-align: center;
-}
-
-#capa .home-left .titulo .botao a{
+#capa .home-left .titulo .botao a {
   color: #445d7b;
   padding: 5px 23px 5px 23px;
   width: min-content;
@@ -244,6 +450,18 @@ header #menuMobile a:active {
   opacity: 1;
 }
 
+@media only screen and (max-width: 90px) {
+  #capa .home-left .titulo .botao a {
+    font-size: 25px;
+    padding: 0;
+  }
+
+  #capa .home-left .titulo .botao a:hover,
+  #capa .home-left .titulo .botao a:active {
+    font-size: 30px;
+  }
+}
+
 #sobre {
   width: 100%;
   height: fit-content;
@@ -257,6 +475,14 @@ header #menuMobile a:active {
   height: auto;
   margin-bottom: 20px;
   transition: 500ms;
+}
+
+@media only screen and (max-width: 600px) {
+  #sobre img {
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+  }
 }
 
 #sobre img:hover,
@@ -285,10 +511,17 @@ header #menuMobile a:active {
 
 #conhecimentos .skillbar {
   height: fit-content;
-  max-width: 100%;
+  /* max-width: 100%; */
   width: 70%;
   margin: 60px auto 0 auto;
   display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  #conhecimentos .skillbar {
+    width: 100%;
+    margin: 30px auto 0 auto;
+  }
 }
 
 #conhecimentos h3 {
@@ -306,10 +539,6 @@ header #menuMobile a:active {
 
 }
 
-#conhecimentos .skillbar>div {
-  transition: 200ms;
-}
-
 #conhecimentos .skillbar>div:hover,
 #conhecimentos .skillbar>div:active {
   opacity: 0.8;
@@ -320,14 +549,26 @@ header #menuMobile a:active {
   overflow: hidden;
 }
 
+@media only screen and (max-width: 600px) {
+  #conhecimentos .skillbar .progress-bar {
+    margin-bottom: 20px;
+  }
+}
+
 #conhecimentos .skillbar .progress-content-outter {
   height: 27px;
   background-color: #E1E1E0;
   text-align: end;
 }
 
+@media only screen and (max-width: 600px) {
+  #conhecimentos .skillbar .progress-content-outter {
+    height: 23px;
+  }
+}
+
 #conhecimentos .skillbar .progress-content {
-  height: 40px;
+  height: 100%;
   background-color: rgb(190, 87, 46);
   width: 0%;
   /* Initial value */
@@ -341,8 +582,6 @@ header #menuMobile a:active {
 }
 
 #projetos {
-  width: 100%;
-  height: 850px;
   background-color: lavander;
   overflow: hidden;
 }
@@ -350,6 +589,12 @@ header #menuMobile a:active {
 #projetos ul {
   margin: 0 auto;
   width: 70%;
+}
+
+@media only screen and (max-width: 600px) {
+  #projetos ul {
+    width: 100%;
+  }
 }
 
 #projetos li {
@@ -363,12 +608,26 @@ header #menuMobile a:active {
   transition: 700ms;
 }
 
+@media only screen and (max-width: 600px) {
+  #projetos li {
+    padding-right: 0;
+    height: fit-content;
+  }
+}
+
 #projetos li:hover,
 #projetos li:active {
   border-color: rgb(190, 87, 46);
   box-shadow: 0px 0px 5px grey;
   transform: scale(1.05, 1.05);
   cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  #projetos li h3 {
+    text-align: center;
+    display: grid;
+  }
 }
 
 #projetos img {
@@ -378,9 +637,25 @@ header #menuMobile a:active {
   margin-right: 20px;
 }
 
+@media only screen and (max-width: 600px) {
+  #projetos img {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    float: none;
+  }
+}
+
 #projetos p {
   font-size: 0.9em;
   line-height: 1.5em;
+}
+
+@media only screen and (max-width: 600px) {
+  #projetos p {
+    padding: 10px;
+    text-align: justify;
+  }
 }
 
 #contato {
@@ -395,6 +670,13 @@ header #menuMobile a:active {
   margin: 0 auto;
   color: white;
   /* overflow: hidden; */
+}
+
+@media only screen and (max-width: 600px) {
+  #contato form {
+    width: 100%;
+    text-align: justify;
+  }
 }
 
 #contato input {
@@ -452,6 +734,12 @@ footer .icons {
   font-size: 3em;
   text-align: center;
   margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+  footer .icons {
+    font-size: 2.3em;
+  }
 }
 
 footer .icons a {

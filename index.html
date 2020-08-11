@@ -3,6 +3,10 @@
 
 
 <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta charset="UTF-8">
+    <title>Luiz</title>
+    
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/animate.css">
@@ -14,11 +18,11 @@
     <script src="./js/fill.bar.js"></script>
     <script src="./js/wow.js"></script>
     <script>
-        new WOW().init();
+        var wow = new WOW({
+            live: false
+        });
+        wow.init();
     </script>
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta charset="UTF-8">
-    <title>Luiz</title>
 </head>
 
 <body>
@@ -34,9 +38,9 @@
                     <li><a href="#contato">contato</a></li>
                 </ul>
                 <!-- Mobile -->
-                <div id=menuMobile>
+                <div id="menuMobile">
                     <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
-                    <i class="fa fa-bars"></i>
+                        <i class="fa fa-bars"></i>
                     </a>
                 </div>
             </nav>
@@ -63,7 +67,7 @@
                         <h1 class="subtitulo">.</h1>
                     </div>
                     <div class="botao-container">
-                        <div class="botao"><a href="#sobre"><i class="fa fa-arrow-circle-down wow bounceIn"
+                        <div class="botao"><a href="#sobre"><i class="fa fa-arrow-circle-down bounceIn"
                                     aria-hidden="true"></i></a></div>
                     </div>
                 </div>

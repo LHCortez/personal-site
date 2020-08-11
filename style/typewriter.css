@@ -1,3 +1,7 @@
+.css-typing {
+    margin: 0 auto;
+}
+
 .css-typing h1 {
     border-right: .1em solid black;
     /* font-size: 20px; */
@@ -16,6 +20,7 @@
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
+
 
 .css-typing h1:nth-child(2) {
     width: 11.3em;
