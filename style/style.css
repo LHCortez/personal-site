@@ -1,35 +1,47 @@
+/* Usado para prefixos: https://autoprefixer.github.io */
+/* Usado para animações: https://github.com/matthieua/WOW */
+
 .wow {
   visibility: hidden;
-  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .fadeInLeft {
-  animation-name: fadeInLeft;
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
 }
 
 .fadeInRight {
-
-  animation-name: fadeInRight;
+  -webkit-animation-name: fadeInRight;
+          animation-name: fadeInRight;
 }
 
 .fadeInDown {
-  animation-name: fadeInDown;
+  -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown;
 }
 
 .fadeInUp {
-  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
 }
 
 .zoomIn {
-  animation-name: zoomIn;
+  -webkit-animation-name: zoomIn;
+          animation-name: zoomIn;
 }
 
 .bounceIn {
-  animation-duration: 2s;
-  animation-name: bounceIn;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-name: bounceIn;
+          animation-name: bounceIn;
   opacity: 0;
-  animation-delay: 2.5s;
-  animation-fill-mode: forwards;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 html {
@@ -80,8 +92,11 @@ h3 {
   height: inherit;
   margin: 0 auto;
   padding: 52px;
-  box-sizing: border-box;
-  align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   z-index: inherit;
   overflow: hidden;
 }
@@ -104,13 +119,16 @@ header {
   height: 50px;
   display: block;
   position: fixed;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-bottom: rgb(190, 87, 46) 2px solid;
   z-index: 10;
 }
 
 header .container {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 0 50px;
 }
@@ -135,16 +153,20 @@ header .logo {
 header nav {
   padding-right: inherit;
   display: inline;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: absolute;
   right: 0px;
 }
 
 header nav .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   left: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @media only screen and (max-width: 600px) {
@@ -161,6 +183,8 @@ header nav .menu li {
 header a {
   color: lavender;
   text-decoration: none;
+  -webkit-transition: 400ms;
+  -o-transition: 400ms;
   transition: 400ms;
 }
 
@@ -172,7 +196,6 @@ header a:active {
 
 header #menuMobile {
   display: none;
-  ;
 }
 
 @media only screen and (max-width: 599px) {
@@ -193,13 +216,11 @@ header #menuMobile #linksMobile li a {
   padding: 20px 25px 20px 0;
 }
 
-/* Style the hamburger menu */
 header #menuMobile a.icon {
   display: block;
   font-size: 40px;
 }
 
-/* Add a grey background color on mouse-over */
 header #menuMobile a:hover,
 header #menuMobile a:active {
   background-color: #ddd;
@@ -226,7 +247,8 @@ header #menuMobile a:active {
   background-color: #445d7b;
   /* background-blend-mode: luminosity; */
   background-size: 90%;
-  clip-path: polygon(19% 0%, 100% 0%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(19% 0%, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(19% 0%, 100% 0%, 100% 100%, 0% 100%);
   padding-top: 50px;
 }
 
@@ -248,7 +270,8 @@ header #menuMobile a:active {
     left: 0;
     width: 100vw;
     height: 50%;
-    clip-path: unset;
+    -webkit-clip-path: unset;
+            clip-path: unset;
     background-position-y: bottom;
     background-size: 100%;
   }
@@ -260,9 +283,15 @@ header #menuMobile a:active {
   top: 0;
   width: 44%;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-left: 2%;
   overflow: hidden;
 }
@@ -275,7 +304,9 @@ header #menuMobile a:active {
     height: 100vh;
     z-index: 1;
     padding-left: unset;
-    align-items: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
 }
 
@@ -340,7 +371,8 @@ header #menuMobile a:active {
   #capa .home-left .titulo {
     height: 45vh;
     padding-top: 20%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     font-size: 25px;
   }
 }
@@ -381,7 +413,8 @@ header #menuMobile a:active {
   }
 
   .bounceIn{
-    animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
   }
 }
 
@@ -402,7 +435,8 @@ header #menuMobile a:active {
   }
 
   .bounceIn{
-    animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
   }
 }
 
@@ -416,10 +450,10 @@ header #menuMobile a:active {
   }
 
   .bounceIn{
-    animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
   }
 } 
-
 
 @media only screen and (max-height: 375px) {
   #capa .home-left .titulo .botao-container {
@@ -440,12 +474,17 @@ header #menuMobile a:active {
 #capa .home-left .titulo .botao a {
   color: #445d7b;
   padding: 5px 23px 5px 23px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
   width: min-content;
   display: initial;
   font-size: 55px;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
   transition: 500ms;
   cursor: pointer;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   overflow: hidden;
 }
 
@@ -470,7 +509,6 @@ header #menuMobile a:active {
 
 #sobre {
   width: 100%;
-  height: fit-content;
   position: relative;
   background: #fefefe;
   overflow: hidden;
@@ -480,14 +518,18 @@ header #menuMobile a:active {
   width: 100%;
   height: auto;
   margin-bottom: 20px;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
   transition: 500ms;
 }
 
 @media only screen and (max-width: 600px) {
   #sobre img {
     height: 120px;
-    object-fit: cover;
-    object-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
   }
 }
 
@@ -506,18 +548,17 @@ header #menuMobile a:active {
 
 #sobre .sobre-conteudo {
   width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
 }
 
 #conhecimentos {
   background-color: #6689b4;
-  height: fit-content;
   overflow: hidden;
 }
 
 #conhecimentos .skillbar {
-  height: fit-content;
-  /* max-width: 100%; */
   width: 70%;
   margin: 60px auto 0 auto;
   display: block;
@@ -595,13 +636,11 @@ header #menuMobile a:active {
   height: 100%;
   background-color: rgb(190, 87, 46);
   width: 0%;
-  /* Initial value */
 }
 
 #conhecimentos .skillbar .progress-number-wrapper {
   color: black;
   position: relative;
-  /* top: 0; */
   z-index: 10000;
 }
 
@@ -629,7 +668,7 @@ header #menuMobile a:active {
 
 @media only screen and (max-width: 800px) {
   #projetos ul {
-    width: 100%;
+    width: 97%;
   }
 }
 
@@ -638,9 +677,12 @@ header #menuMobile a:active {
   border-radius: 10px;
   margin-bottom: 40px;
   padding-right: 20px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 190px;
   overflow: hidden;
+  -webkit-transition: 700ms;
+  -o-transition: 700ms;
   transition: 700ms;
 }
 
@@ -653,21 +695,25 @@ header #menuMobile a:active {
 @media only screen and (max-width: 600px) {
   #projetos li {
     padding-right: 0;
-    height: fit-content;
+    display: table;
   }
 }
 
 #projetos li:hover,
 #projetos li:active {
   border-color: rgb(190, 87, 46);
-  box-shadow: 0px 0px 5px grey;
-  transform: scale(1.05, 1.05);
+  -webkit-box-shadow: 0px 0px 5px grey;
+          box-shadow: 0px 0px 5px grey;
+  -webkit-transform: scale(1.03, 1.03);
+      -ms-transform: scale(1.03, 1.03);
+          transform: scale(1.03, 1.03);
   cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {
   #projetos li h3 {
     text-align: center;
+    display: -ms-grid;
     display: grid;
   }
 }
@@ -683,8 +729,10 @@ header #menuMobile a:active {
   #projetos img {
     height: 100%;
     width: 200px;
-    object-fit: cover;
-    object-position: left;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: left;
+       object-position: left;
   }
 }
 
@@ -711,7 +759,6 @@ header #menuMobile a:active {
 
 #contato {
   width: 100%;
-  height: fit-content;
   background-color: #445d7b;
   overflow: hidden;
 }
@@ -756,7 +803,8 @@ header #menuMobile a:active {
   border: 0;
   font-size: 1em;
   padding: 5px 15px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -765,7 +813,8 @@ header #menuMobile a:active {
   padding: 10px 15px;
   width: 100%;
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 1em;
   margin: 3px 0;
   border: 0;
@@ -780,6 +829,8 @@ header #menuMobile a:active {
   width: 30%;
   float: right;
   cursor: pointer;
+  -webkit-transition: 700ms;
+  -o-transition: 700ms;
   transition: 700ms;
 }
 
@@ -796,7 +847,6 @@ header #menuMobile a:active {
 
 footer {
   width: 100%;
-  height: fit-content;
   background-color: #16283f;
   overflow: hidden;
 }
@@ -815,6 +865,8 @@ footer .icons {
 }
 
 footer .icons a {
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
   transition: 500ms;
   color: rgb(190, 87, 46);
   margin: 0 15px;
