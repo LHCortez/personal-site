@@ -79,11 +79,17 @@ h3 {
   max-width: 1200px;
   height: inherit;
   margin: 0 auto;
-  padding: 50px;
+  padding: 52px;
   box-sizing: border-box;
   align-items: center;
   z-index: inherit;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 1100px) {
+  .container {
+    padding: 52px 30px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -517,6 +523,24 @@ header #menuMobile a:active {
   display: block;
 }
 
+@media only screen and (max-width: 1100px) {
+  #conhecimentos .skillbar {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #conhecimentos .skillbar {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #conhecimentos .skillbar {
+    width: 95%;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   #conhecimentos .skillbar {
     width: 100%;
@@ -591,7 +615,19 @@ header #menuMobile a:active {
   width: 70%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1100px) {
+  #projetos ul {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #projetos ul {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
   #projetos ul {
     width: 100%;
   }
@@ -603,9 +639,15 @@ header #menuMobile a:active {
   margin-bottom: 40px;
   padding-right: 20px;
   box-sizing: border-box;
-  height: 180px;
+  height: 190px;
   overflow: hidden;
   transition: 700ms;
+}
+
+@media only screen and (max-width: 750px) {
+  #projetos li {
+    height: 230px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -635,6 +677,15 @@ header #menuMobile a:active {
   width: auto;
   float: left;
   margin-right: 20px;
+}
+
+@media only screen and (max-width: 750px) {
+  #projetos img {
+    height: 100%;
+    width: 200px;
+    object-fit: cover;
+    object-position: left;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -670,6 +721,24 @@ header #menuMobile a:active {
   margin: 0 auto;
   color: white;
   /* overflow: hidden; */
+}
+
+@media only screen and (max-width: 1100px) {
+  #contato form {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #contato form {
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #contato form {
+    width: 80%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -710,11 +779,14 @@ header #menuMobile a:active {
   border: 2px solid lavender;
   width: 30%;
   float: right;
-}
-
-#contato .enviar {
   cursor: pointer;
   transition: 700ms;
+}
+
+@media only screen and (max-width: 280px) {
+  #contato .enviar {
+    width: 100%;
+  }
 }
 
 #contato .enviar:hover,
