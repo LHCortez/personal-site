@@ -4,44 +4,44 @@
 .wow {
   visibility: hidden;
   -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-duration: 1s;
 }
 
 .fadeInLeft {
   -webkit-animation-name: fadeInLeft;
-          animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
 }
 
 .fadeInRight {
   -webkit-animation-name: fadeInRight;
-          animation-name: fadeInRight;
+  animation-name: fadeInRight;
 }
 
 .fadeInDown {
   -webkit-animation-name: fadeInDown;
-          animation-name: fadeInDown;
+  animation-name: fadeInDown;
 }
 
 .fadeInUp {
   -webkit-animation-name: fadeInUp;
-          animation-name: fadeInUp;
+  animation-name: fadeInUp;
 }
 
 .zoomIn {
   -webkit-animation-name: zoomIn;
-          animation-name: zoomIn;
+  animation-name: zoomIn;
 }
 
 .bounceIn {
   -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  animation-duration: 2s;
   -webkit-animation-name: bounceIn;
-          animation-name: bounceIn;
+  animation-name: bounceIn;
   opacity: 0;
   -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
+  animation-delay: 2.5s;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 html {
@@ -51,6 +51,7 @@ html {
 body {
   background-color: lavender;
   font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media only screen and (max-width: 600px) {
@@ -93,10 +94,10 @@ h3 {
   margin: 0 auto;
   padding: 52px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   z-index: inherit;
   overflow: hidden;
 }
@@ -120,7 +121,7 @@ header {
   display: block;
   position: fixed;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-bottom: rgb(190, 87, 46) 2px solid;
   z-index: 10;
 }
@@ -153,8 +154,9 @@ header .logo {
 header nav {
   padding-right: inherit;
   display: inline;
+  font-family: 'Roboto Mono', monospace;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   position: absolute;
   right: 0px;
 }
@@ -166,7 +168,7 @@ header nav .menu {
   position: relative;
   left: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @media only screen and (max-width: 600px) {
@@ -177,7 +179,7 @@ header nav .menu {
 
 header nav .menu li {
   margin-left: 40px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 header a {
@@ -190,7 +192,6 @@ header a {
 
 header a:hover,
 header a:active {
-  opacity: 0.7;
   color: rgb(190, 87, 46);
 }
 
@@ -248,7 +249,7 @@ header #menuMobile a:active {
   /* background-blend-mode: luminosity; */
   background-size: 90%;
   -webkit-clip-path: polygon(19% 0%, 100% 0%, 100% 100%, 0% 100%);
-          clip-path: polygon(19% 0%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(19% 0%, 100% 0%, 100% 100%, 0% 100%);
   padding-top: 50px;
 }
 
@@ -271,7 +272,7 @@ header #menuMobile a:active {
     width: 100vw;
     height: 50%;
     -webkit-clip-path: unset;
-            clip-path: unset;
+    clip-path: unset;
     background-position-y: bottom;
     background-size: 100%;
   }
@@ -287,11 +288,11 @@ header #menuMobile a:active {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding-left: 2%;
   overflow: hidden;
 }
@@ -305,13 +306,13 @@ header #menuMobile a:active {
     z-index: 1;
     padding-left: unset;
     -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
   }
 }
 
 #capa .home-left .titulo {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto Mono', monospace;
   font-size: 30px;
   line-height: 1.5em;
   width: 14.5em;
@@ -367,54 +368,54 @@ header #menuMobile a:active {
   }
 }
 
-@media only screen and (max-width: 600px) and (max-aspect-ratio: 3/4)  {
+@media only screen and (max-width: 600px) and (max-aspect-ratio: 3/4) {
   #capa .home-left .titulo {
     height: 45vh;
     padding-top: 20%;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     font-size: 25px;
   }
 }
 
-@media only screen and (max-width: 480px) and (max-height: 639px) and (min-aspect-ratio: 2999/4000)  {
+@media only screen and (max-width: 480px) and (max-height: 639px) and (min-aspect-ratio: 2999/4000) {
   #capa .home-left .titulo {
     font-size: 12px;
   }
 }
 
-@media only screen and (max-width: 450px) and (max-aspect-ratio: 3/4)  {
+@media only screen and (max-width: 450px) and (max-aspect-ratio: 3/4) {
   #capa .home-left .titulo {
     font-size: 20px;
   }
 }
 
-@media only screen and (max-width: 340px) and (max-aspect-ratio: 3/4)  {
+@media only screen and (max-width: 340px) and (max-aspect-ratio: 3/4) {
   #capa .home-left .titulo {
     font-size: 17px;
   }
 }
 
-@media only screen and (max-width: 275px) and (max-aspect-ratio: 3/4)  {
+@media only screen and (max-width: 275px) and (max-aspect-ratio: 3/4) {
   #capa .home-left .titulo {
     font-size: 15px;
   }
 }
 
-@media only screen and (max-width: 240px) and (max-aspect-ratio: 3/4)  {
+@media only screen and (max-width: 240px) and (max-aspect-ratio: 3/4) {
   #capa .home-left .titulo {
     font-size: 13px;
   }
 }
 
-@media only screen and (max-width: 200px) and (max-aspect-ratio: 3/4)  {
+@media only screen and (max-width: 200px) and (max-aspect-ratio: 3/4) {
   #capa .home-left .titulo .css-typing {
     display: none;
   }
 
-  .bounceIn{
+  .bounceIn {
     -webkit-animation-delay: 0s;
-            animation-delay: 0s;
+    animation-delay: 0s;
   }
 }
 
@@ -425,7 +426,7 @@ header #menuMobile a:active {
   height: 60px;
 }
 
-@media only screen and (max-width: 380px) and (max-height: 506px) and (min-aspect-ratio: 2999/4000)  {
+@media only screen and (max-width: 380px) and (max-height: 506px) and (min-aspect-ratio: 2999/4000) {
   #capa .home-left .titulo .css-typing {
     display: none;
   }
@@ -434,9 +435,9 @@ header #menuMobile a:active {
     margin-top: 0;
   }
 
-  .bounceIn{
+  .bounceIn {
     -webkit-animation-delay: 0s;
-            animation-delay: 0s;
+    animation-delay: 0s;
   }
 }
 
@@ -449,11 +450,11 @@ header #menuMobile a:active {
     margin-top: 0;
   }
 
-  .bounceIn{
+  .bounceIn {
     -webkit-animation-delay: 0s;
-            animation-delay: 0s;
+    animation-delay: 0s;
   }
-} 
+}
 
 @media only screen and (max-height: 375px) {
   #capa .home-left .titulo .botao-container {
@@ -461,7 +462,7 @@ header #menuMobile a:active {
   }
 }
 
-@media only screen and (max-width: 450px) and (max-aspect-ratio: 3/4)  {
+@media only screen and (max-width: 450px) and (max-aspect-ratio: 3/4) {
   #capa .home-left .titulo .botao-container {
     margin-top: 0;
   }
@@ -484,7 +485,7 @@ header #menuMobile a:active {
   transition: 500ms;
   cursor: pointer;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   overflow: hidden;
 }
 
@@ -527,9 +528,9 @@ header #menuMobile a:active {
   #sobre img {
     height: 120px;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     -o-object-position: center;
-       object-position: center;
+    object-position: center;
   }
 }
 
@@ -590,13 +591,15 @@ header #menuMobile a:active {
 }
 
 #conhecimentos h3 {
+  font-family: 'Roboto Mono', monospace;
   padding: 0 0 5px 0;
+
 }
 
 #conhecimentos .percent {
   color: #2e2e2e;
   padding: 0 10px;
-  font-size: 17px;
+  font-size: 16px;
   /* line-height: 25.5px; */
   vertical-align: middle;
   font-weight: 700;
@@ -622,7 +625,7 @@ header #menuMobile a:active {
 
 #conhecimentos .skillbar .progress-content-outter {
   height: 27px;
-  background-color: #E1E1E0;
+  background-color: #99b1cd;
   text-align: end;
 }
 
@@ -634,7 +637,7 @@ header #menuMobile a:active {
 
 #conhecimentos .skillbar .progress-content {
   height: 100%;
-  background-color: rgb(190, 87, 46);
+  background-color: rgb(199, 110, 75);
   width: 0%;
 }
 
@@ -678,7 +681,7 @@ header #menuMobile a:active {
   margin-bottom: 40px;
   padding-right: 20px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   height: 190px;
   overflow: hidden;
   -webkit-transition: 700ms;
@@ -703,10 +706,10 @@ header #menuMobile a:active {
 #projetos li:active {
   border-color: rgb(190, 87, 46);
   -webkit-box-shadow: 0px 0px 5px grey;
-          box-shadow: 0px 0px 5px grey;
+  box-shadow: 0px 0px 5px grey;
   -webkit-transform: scale(1.03, 1.03);
-      -ms-transform: scale(1.03, 1.03);
-          transform: scale(1.03, 1.03);
+  -ms-transform: scale(1.03, 1.03);
+  transform: scale(1.03, 1.03);
   cursor: pointer;
 }
 
@@ -730,9 +733,9 @@ header #menuMobile a:active {
     height: 100%;
     width: 200px;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     -o-object-position: left;
-       object-position: left;
+    object-position: left;
   }
 }
 
@@ -804,9 +807,10 @@ header #menuMobile a:active {
   font-size: 1em;
   padding: 5px 15px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
 }
 
 #contato textarea {
@@ -814,13 +818,14 @@ header #menuMobile a:active {
   width: 100%;
   display: block;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 1em;
   margin: 3px 0;
   border: 0;
   background-color: #091a2f;
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
 }
 
 #contato .enviar {
@@ -832,6 +837,7 @@ header #menuMobile a:active {
   -webkit-transition: 700ms;
   -o-transition: 700ms;
   transition: 700ms;
+  font-style: unset;
 }
 
 @media only screen and (max-width: 280px) {
@@ -842,7 +848,7 @@ header #menuMobile a:active {
 
 #contato .enviar:hover,
 #contato .enviar:active {
-  background-color: rgb(190, 87, 46);
+  background-color: rgb(199, 110, 75);
 }
 
 footer {
@@ -868,7 +874,7 @@ footer .icons a {
   -webkit-transition: 500ms;
   -o-transition: 500ms;
   transition: 500ms;
-  color: rgb(190, 87, 46);
+  color: rgb(199, 110, 75);
   margin: 0 15px;
 }
 
