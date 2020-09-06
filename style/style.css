@@ -145,6 +145,11 @@ header .logo {
   width: auto;
 }
 
+header .logo:hover,
+header .logo:active {
+  opacity: 0.8;
+}
+
 @media only screen and (max-width: 175px) {
   header .logo {
     display: none;
@@ -171,7 +176,7 @@ header nav .menu {
   box-sizing: border-box;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 720px) {
   header nav .menu {
     display: none;
   }
@@ -199,7 +204,7 @@ header #menuMobile {
   display: none;
 }
 
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 720px) {
   header nav #menuMobile {
     display: unset;
   }
@@ -228,7 +233,7 @@ header #menuMobile a:active {
   color: black;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 720px) {
   header #menuMobile {
     display: unset;
   }
@@ -313,9 +318,10 @@ header #menuMobile a:active {
 
 #capa .home-left .titulo {
   font-family: 'Roboto Mono', monospace;
+  letter-spacing: -0.08em;
   font-size: 30px;
   line-height: 1.5em;
-  width: 14.5em;
+  width: 15.5em;
   overflow: hidden;
   margin-top: 50px;
 }
@@ -334,23 +340,23 @@ header #menuMobile a:active {
 
 @media only screen and (min-width: 231px) and (max-width: 530px) {
   #capa .home-left .titulo {
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 
 @media only screen and (min-width: 531px) and (max-width: 577px) {
   #capa .home-left .titulo {
-    font-size: 16px;
+    font-size: 15.5px;
   }
 }
 
-@media only screen and (min-width: 578px) and (max-width: 649px) {
+@media only screen and (min-width: 578px) and (max-width: 700px) {
   #capa .home-left .titulo {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 
-@media only screen and (min-width: 650px) and (max-width: 768px) {
+@media only screen and (min-width: 699px) and (max-width: 768px) {
   #capa .home-left .titulo {
     font-size: 20px;
   }
@@ -358,7 +364,7 @@ header #menuMobile a:active {
 
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
   #capa .home-left .titulo {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 
@@ -380,7 +386,7 @@ header #menuMobile a:active {
 
 @media only screen and (max-width: 480px) and (max-height: 639px) and (min-aspect-ratio: 2999/4000) {
   #capa .home-left .titulo {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 
@@ -760,6 +766,15 @@ header #menuMobile a:active {
   }
 }
 
+#projetos a {
+  text-decoration: none;
+  color: unset;
+}
+
+#projetos a:visited {
+  color: unset;
+}
+
 #contato {
   width: 100%;
   background-color: #445d7b;
@@ -864,11 +879,7 @@ footer .icons {
   margin-bottom: 40px;
 }
 
-@media only screen and (max-width: 600px) {
-  footer .icons {
-    font-size: 2.3em;
-  }
-}
+
 
 footer .icons a {
   -webkit-transition: 500ms;
@@ -881,6 +892,12 @@ footer .icons a {
 footer .icons a:hover,
 footer .icons a:active {
   opacity: 0.6;
+}
+
+@media only screen and (max-width: 270px) {
+  footer .icons a {
+    margin: 0 5px;
+  }
 }
 
 footer p {

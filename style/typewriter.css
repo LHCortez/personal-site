@@ -14,16 +14,16 @@
 }
 
 .css-typing h1:nth-child(1) {
-    width: 14.5em;
-    -webkit-animation: type 1.2s steps(40, end);
-    animation: type 1.2s steps(40, end);
+    width: 15.3em;
+    -webkit-animation: type 1.2s steps(50, end);
+    animation: type 1.2s steps(50, end);
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
 
 
 .css-typing h1:nth-child(2) {
-    width: 11.3em;
+    width: 12.4em;
     opacity: 0;
     -webkit-animation: type2 1.2s steps(40, end);
     animation: type2 1.2s steps(40, end);
@@ -34,7 +34,7 @@
 }
 
 .css-typing h1:nth-child(3) {
-    width: 0.4em;
+    width: 0.5em;
     opacity: 0;
     -webkit-animation: type3 0.1s steps(2, end), blink .5s step-end infinite alternate;
     animation: type3 0.1s steps(2, end), blink .5s step-end infinite alternate;
